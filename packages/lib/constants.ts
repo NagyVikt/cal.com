@@ -117,7 +117,10 @@ export const FULL_NAME_LENGTH_MAX_LIMIT = 50;
 export const MINUTES_TO_BOOK = process.env.NEXT_PUBLIC_MINUTES_TO_BOOK || "5";
 export const ENABLE_PROFILE_SWITCHER = process.env.NEXT_PUBLIC_ENABLE_PROFILE_SWITCHER === "1";
 // Needed for orgs
+console.log("ALLOWED_HOSTNAMES ENV:", process.env.ALLOWED_HOSTNAMES);
+console.log("ALLOWED_HOSTNAMES FOR JSON:", `[${process.env.ALLOWED_HOSTNAMES || ""}]`);
 export const ALLOWED_HOSTNAMES = JSON.parse(`[${process.env.ALLOWED_HOSTNAMES || ""}]`) as string[];
+
 export const RESERVED_SUBDOMAINS = JSON.parse(`[${process.env.RESERVED_SUBDOMAINS || ""}]`) as string[];
 
 export const ORGANIZATION_SELF_SERVE_MIN_SEATS = parseInt(
